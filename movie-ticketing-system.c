@@ -1,5 +1,5 @@
 //Name: Akshaj Murhekar
-//Student ID Number: 1001752757
+//Movie Theater Ticekting Program
 
 #include <stdio.h>
 #include <stdlib.h>

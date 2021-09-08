@@ -121,7 +121,7 @@ int main(void)
     int usrSeat;
     char MovieTheater[MAX_ROWS][MAX_COLS] = {};
 
-    FILE *InputFile = NULL;
+    FILE *InputFile;
     char filename[100] = {};
     char arrSeat[MAX_ROWS*MAX_COLS] = {};
 
@@ -129,11 +129,11 @@ int main(void)
     printf("Enter the Movie Theater file name: ");
     scanf("%s", filename);
 
-    InputFile = fopen(filename, "r");
+    InputFile = fopen(filename, "w");
 
     if (InputFile == NULL)
     {
-        printf("File did not open properly! BHENCHOD!");
+        printf("File did not open properly! Exiting");
         exit(0);
     }
     else
@@ -182,11 +182,11 @@ int main(void)
 			}
 			else if (IsSeatSold(MovieTheater, ArrayRow, ArrayCol))
 			{
-				printf("Seat %c%d is already sold. Pick a different seat.\n", usrRow, usrSeat);
+			    printf("Seat %c%d is already sold. Pick a different seat.\n", usrRow, usrSeat);
 			}
 			else
 			{
-                tktSold++;
+          tktSold++;
 			}
 
 
